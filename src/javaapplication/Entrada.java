@@ -27,15 +27,15 @@ public class Entrada {
         int aux = 0;
         /* Definir un scanner para poder leer por teclado*/
         
-        //Scanner teclado =  new Scanner(System.in);
+        Scanner teclado =  new Scanner(System.in);
    
         try {
             /*Leer por teclado y asigar a aux*/
-            //aux=teclado.nextInt();
+            aux=teclado.nextInt();
             
             /*Si el usuario introduce un numero mayor menor de 100 lanzar
               un throw de tipo IllegalArgumentException */
-           //if(aux>100) throw new IllegalArgumentException("Introduce un numero menor de 100");
+           if(aux>100) throw new IllegalArgumentException("Introduce un numero menor de 100");
            
         } catch (IllegalArgumentException e){
             System.out.println(e);
@@ -48,7 +48,7 @@ public class Entrada {
      * que pida una cadena de caracteres. (sin Throw)
      */
     
-    /* public static String texto() {
+    public static String texto() {
         String aux="";
         // Definir un scanner para poder leer por teclado
         
@@ -62,5 +62,5 @@ public class Entrada {
             System.out.println(e);
         }
         return aux;
-    }*/
+    }
 }
