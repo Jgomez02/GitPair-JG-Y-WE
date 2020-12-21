@@ -40,6 +40,21 @@ public class Entrada {
         }
         return aux;
     }
-
-
+     
+    
+    public static String texto() {
+        String aux="";
+        // Definir un scanner 
+        
+        Scanner entrada =  new Scanner(System.in);
+   
+        try {
+            //Leer el valor de la entrada y asignarla a aux
+            aux=entrada.nextLine();
+           
+        } catch (IllegalArgumentException e){
+            System.out.println(e);
+        }
+        return aux;
+    }
 }
