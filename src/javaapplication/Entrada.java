@@ -11,13 +11,12 @@ import java.util.Scanner;
 /**
  * El programador B creará los metodos necesarios para: (seguir instrucciones)
  *
- * @author  Pon tu nombre Programador B
+ * @author Juan Gomez DAM1A
  */
 public class Entrada {
 
     /**
-     * Metodo que pide un numero entero al usuario
-     * y lo devuelve con un return
+     * Metodo que pide un numero entero al usuario y lo devuelve con un return
      *
      * @throws InputMismatchException error de argumentos
      * @return int Devuelve el numero
@@ -25,33 +24,36 @@ public class Entrada {
      */
     public static int entero() {
         int aux = 0;
-        
-        /* Definir un scanner para poder leer por teclado*/
-        
-        //Scanner teclado = .......
-       
+
+        /*Definir un scanner*/
+        Scanner entrada = new Scanner(System.in);
+
         try {
-            /*Leer por teclado y asigar a aux*/
-            //aux=
-            
-            /*Si el usuario introduce un numero mayor menor de 100 lanzar
-              un throw de tipo IllegalArgumentException */
-           
-            //Aqui va el throw
-        } catch (IllegalArgumentException e){
+            aux = entrada.nextInt();
+            /*Si el usuario digita un numero amyor de 100
+            se lanzara un error con el mensaje de que debe introducir una edad valida*/
+            if (aux > 100) {
+                throw new IllegalArgumentException("Introduzca una edad valida");
+            }
+        } catch (IllegalArgumentException e) {
             System.out.println(e);
         }
         return aux;
     }
-    
-    /**
-     * Crear a continuación un metodo parecida a la anterior
-     * que pida una cadena de caracteres. (sin Throw)
-     */
-    
-    //
-    //
-    //
-    //
-    //
+
+    public static String texto() {
+        String aux = "";
+        // Definir un scanner 
+
+        Scanner entrada = new Scanner(System.in);
+
+        try {
+            //Leer el valor de la entrada y asignarla a aux
+            aux = entrada.nextLine();
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
+        return aux;
+    }
 }
