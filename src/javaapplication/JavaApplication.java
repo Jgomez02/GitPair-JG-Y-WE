@@ -26,37 +26,35 @@ public class JavaApplication {
      */
     public static void main(String[] args) {
         /*Inicializamos las variables necesarias*/
-        String nombre= "";
-        int edad =0;
-        int dias = 0;
-        int horas =0;
-        int minutos =0;
-        int segundos =0;
-        
-        
+        String nombre="";
+        int edad=0,dias=0,horas=0,minutos=0,segundos=0;        
         
         /* Preguntamos el nombre del usuario*/
-        System.out.println("Introduzca su Nombre");
-        //nombre = 
+        //System.out.println("Introduce tu nombre");
+        //nombre=Entrada.texto();
        
         /* Preguntamos la edad en años usuario*/
-          System.out.println("Cuantos años tienes");
-        edad= Entrada.entero();
+        //System.out.println("Introduce tu edad");
+        //edad=Entrada.entero();
         
         /*Aqui calculamos los dias*/
-        dias= edad*365;
+        //dias=edad*365;
         
         /*Aqui calculamos las horas*/
-        horas=dias*24;
+        //horas=dias*24;
         
         /*Aqui calculamos los minutos*/
-        minutos= horas*60;
+        //minutos=horas*60;
         
         /*Aqui calculamos los segundos*/
-        segundos= minutos*60;
+        //segundos=minutos*60;
         
         /*Salida por pantalla*/
-        System.out.println("Felicidades" + nombre + "haz vidido" );
+        System.out.println("Felicidades "+nombre+", has vivido:");
+        System.out.println(dias+ " dias");
+        System.out.println(horas+ " horas");
+        System.out.println(minutos+ " minutos");
+        System.out.println(segundos+ " segundos");
     }
 
 }
